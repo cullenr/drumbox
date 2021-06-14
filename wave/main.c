@@ -29,8 +29,9 @@ typedef struct WaveHeader {
     uint32_t sc2Size;
 } WaveHeader;
 
-void writeHeader(WaveHeader *h, uint32_t num_samples, uint16_t channels, 
-                 uint16_t bitdepth, uint32_t sample_rate) {
+void 
+writeHeader(WaveHeader *h, uint32_t num_samples, uint16_t channels, 
+            uint16_t bitdepth, uint32_t sample_rate) {
 
     h->c1Id             = WH_LE_RIFF;
     // 36 = the byte size of the remaining header fields after this one (c1Size)
